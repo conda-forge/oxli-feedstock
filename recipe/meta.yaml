@@ -1,5 +1,5 @@
 {% set name = "oxli" %}
-{% set version = "0.2.3" %}
+{% set version = "0.3.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,11 +7,11 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/oxli-{{ version }}.tar.gz
-  sha256: 3e0771eccb0e62b853aa4cdfb4c33308f240c85b24a946edc0f5fcd45301c42c
+  sha256: 5d6903e92aadd3d2f9736b774d32ba71884a6115462fd8b1914a8dc3727ef3ad
 
 build:
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 0
   skip: true  # [py<310]
 
 requirements:
